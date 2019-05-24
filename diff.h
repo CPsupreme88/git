@@ -65,39 +65,39 @@ typedef struct strbuf *(*diff_prefix_fn_t)(struct diff_options *opt, void *data)
 
 #define DIFF_FLAGS_INIT { 0 }
 struct diff_flags {
-	unsigned recursive;
-	unsigned tree_in_recursive;
-	unsigned binary;
-	unsigned text;
-	unsigned full_index;
-	unsigned silent_on_remove;
-	unsigned find_copies_harder;
-	unsigned follow_renames;
-	unsigned rename_empty;
-	unsigned has_changes;
-	unsigned quick;
-	unsigned no_index;
-	unsigned allow_external;
-	unsigned exit_with_status;
-	unsigned reverse_diff;
-	unsigned check_failed;
-	unsigned relative_name;
-	unsigned ignore_submodules;
-	unsigned dirstat_cumulative;
-	unsigned dirstat_by_file;
-	unsigned allow_textconv;
-	unsigned textconv_set_via_cmdline;
-	unsigned diff_from_contents;
-	unsigned dirty_submodules;
-	unsigned ignore_untracked_in_submodules;
-	unsigned ignore_dirty_submodules;
-	unsigned override_submodule_config;
-	unsigned dirstat_by_line;
-	unsigned funccontext;
-	unsigned default_follow_renames;
-	unsigned stat_with_summary;
-	unsigned suppress_diff_headers;
-	unsigned dual_color_diffed_diffs;
+	unsigned int recursive;
+	unsigned int tree_in_recursive;
+	unsigned int binary;
+	unsigned int text;
+	unsigned int full_index;
+	unsigned int silent_on_remove;
+	unsigned int find_copies_harder;
+	unsigned int follow_renames;
+	unsigned int rename_empty;
+	unsigned int has_changes;
+	unsigned int quick;
+	unsigned int no_index;
+	unsigned int allow_external;
+	unsigned int exit_with_status;
+	unsigned int reverse_diff;
+	unsigned int check_failed;
+	unsigned int relative_name;
+	unsigned int ignore_submodules;
+	unsigned int dirstat_cumulative;
+	unsigned int dirstat_by_file;
+	unsigned int allow_textconv;
+	unsigned int textconv_set_via_cmdline;
+	unsigned int diff_from_contents;
+	unsigned int dirty_submodules;
+	unsigned int ignore_untracked_in_submodules;
+	unsigned int ignore_dirty_submodules;
+	unsigned int override_submodule_config;
+	unsigned int dirstat_by_line;
+	unsigned int funccontext;
+	unsigned int default_follow_renames;
+	unsigned int stat_with_summary;
+	unsigned int suppress_diff_headers;
+	unsigned int dual_color_diffed_diffs;
 };
 
 static inline void diff_flags_or(struct diff_flags *a,
@@ -151,7 +151,7 @@ struct diff_options {
 	int skip_stat_unmatch;
 	int line_termination;
 	int output_format;
-	unsigned pickaxe_opts;
+	unsigned int pickaxe_opts;
 	int rename_score;
 	int rename_limit;
 	int needed_rename_limit;
@@ -169,7 +169,7 @@ struct diff_options {
 	const char *prefix;
 	int prefix_length;
 	const char *stat_sep;
-	long xdl_opts;
+	int xdl_opts;
 
 	/* see Documentation/diff-options.txt */
 	char **anchors;
